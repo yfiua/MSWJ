@@ -1,0 +1,18 @@
+#
+# Stu file for generating the paper from Latex. 
+#
+
+% version 2.4
+
+@all: arXiv.pdf;
+
+arXiv.pdf: arXiv.tex paper.pdf
+{
+    pdflatex arXiv.tex
+}
+
+@clean:
+{
+    rm -f *.aux *.lo? *.out *.bbl *.brf *.blg *.nl? *.ilg *.toc
+    rm -f arXiv.pdf
+}
